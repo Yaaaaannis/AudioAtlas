@@ -1,0 +1,93 @@
+.recently-played {
+    justify-content: center;
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.recently-played h2 {
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 20px;
+
+}
+
+.track-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.track-items {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 80px 400px;
+    padding: 20px;
+
+
+}
+
+.tracks-cover {
+    width: 300px;
+    height: 300px;
+    margin-right: 50px;
+}
+
+.tracks-name {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .recently-played {
+        justify-content: center;
+        margin-top: 50px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .recently-played h2 {
+        font-size: 30px;
+        font-weight: 700;
+        margin-bottom: 20px;
+
+    }
+
+    .track-list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+    }
+
+    .track-items {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 80px 0px;
+        padding: 20px;
+    }
+
+    .track-info {
+        align-items: center;
+    }
+
+    .track-name {
+        text-align: center;
+    }
+
+    .tracks-cover {
+
+        align-items: center;
+        margin-left: 50px;
+
+    }
+}

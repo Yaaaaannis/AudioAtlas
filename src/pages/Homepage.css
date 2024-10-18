@@ -1,0 +1,694 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+@font-face {
+    font-family: 'Satoshi-Variable';
+    src: url('../fonts/Variable/Satoshi-Variable.ttf') format('ttf'),
+        url('../fonts/Variable/Satoshi-Variable.ttf') format('ttf'),
+        url('../fonts/Variable/Satoshi-Variable.ttf') format('truetype');
+    font-weight: 300 900;
+    font-display: swap;
+    font-style: normal;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    /* Retirer les marges par défaut */
+    font-family: 'Satoshi-Variable', sans-serif;
+    background: linear-gradient(45deg, #d2001a, #7462ff, #f462ff, #f48e21, #23d5ab);
+    background-size: 300% 300%;
+    background-attachment: fixed;
+    /* Empêcher le fond de défiler */
+    animation: color 12s ease-in-out infinite;
+    overflow-x: hidden;
+
+}
+
+
+.homepage-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Satoshi-Variable', sans-serif;
+    font-size: 4rem;
+    padding-top: 60px;
+    color: linear-gradient(45deg, #d2001a, #7462ff, #f462ff, #f48e21, #23d5ab);
+    text-align: center;
+    text-shadow: 1px -1px 0px rgba(0, 0, 0, 0.55);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    padding: 15px 20px;
+}
+
+.homepage-context {
+    padding-top: 75px;
+    font-size: 20px;
+}
+
+.homepage-context h2 {
+    padding-bottom: 12px;
+}
+
+
+
+.header-btn {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 15px;
+    padding-right: 15px;
+}
+
+
+.app-header {
+    display: flex;
+    justify-content: center;
+    font-family: 'Satoshi-Variable', sans-serif;
+    font-size: 3rem;
+    padding-top: 50px;
+    color: linear-gradient(45deg, #d2001a, #7462ff, #f462ff, #f48e21, #23d5ab);
+    text-align: center;
+    text-shadow: 1px -1px 0px rgba(0, 0, 0, 0.55);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    padding: 15px 20px;
+}
+
+
+
+.app-btn {
+    font-family: 'Satoshi-Variable', sans-serif;
+    font-weight: 0;
+    font-size: 14px;
+    color: #fff;
+    background-color: #0066CC;
+    padding: 10px 30px;
+    border: 2px solid #0066cc;
+    box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px;
+    border-radius: 38px;
+    transition: 1000ms;
+    transform: translateY(0);
+    display: flex;
+    text-decoration: none;
+    justify-content: right;
+    align-items: center;
+    cursor: pointer;
+}
+
+.app-btn:hover {
+
+    transition: 1000ms;
+    padding: 10px 50px;
+    transform: translateY(-0px);
+    background-color: #1fdf64;
+    color: #0066cc;
+    border: solid 2px #1fdf64;
+}
+
+.content {
+    padding-bottom: 200px;
+}
+
+
+
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    padding: 5vh 10vw;
+}
+
+.time-buttons {
+    display: flex;
+    justify-content: space-between;
+    padding: 5vh 10vw;
+
+
+}
+
+
+
+
+@keyframes color {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.artist-image {
+    width: 20%;
+    height: auto;
+    /* border-radius: 15px; */
+    /* Pour des images rondes */
+}
+
+
+
+.artist-number {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+
+.artist-info {
+    padding: 10px;
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+}
+
+.artist-name {
+    font-size: 40px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 40px;
+
+}
+
+/* Styles pour les artistes en liste */
+.artist {
+    border: 1px solid #eee;
+    padding: 100px;
+    display: fle;
+    /* border-radius: 45px; */
+}
+
+.top-artists-container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    padding-top: 50px;
+}
+
+.top-artist-card {
+    flex: 1 1 calc(33.333% - 10px);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 45px;
+    margin: 10px;
+    text-align: center;
+    padding: 50px 25px;
+    transition: 0.3s;
+    padding-bottom: 50px;
+    cursor: pointer;
+
+}
+
+.top-artist-card img {
+    width: 400px;
+    /* Largeur fixe pour les images */
+    height: 400px;
+    /* Hauteur fixe pour les images */
+    /* border-radius: 15px; */
+    object-fit: cover;
+    /* Couvre la zone de l'image sans déformation, coupe les débordements */
+}
+
+
+.top-artist-card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.rest-artists-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-top: 150px;
+    /* ou space-between selon l'espacement désiré */
+    padding-left: 15%;
+}
+
+.resst-artist {
+    flex: 0 0 calc(33.333% - 10px);
+    display: flex;
+    /* Ajuster la marge en conséquence */
+    margin: 5px;
+    /* La moitié de la soustraction ci-dessus pour une marge égale */
+    /* autres styles */
+    cursor: pointer;
+}
+
+.resst-artist-number {
+    font-size: 30px;
+    font-weight: bold;
+
+}
+
+.resst-artist-info {
+    padding: 10px;
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+}
+
+.resst-artist-name {
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 0px;
+}
+
+.resst-artist img {
+    width: 150px;
+
+    height: 150px;
+
+    /* border-radius: 15px; */
+    object-fit: cover;
+
+}
+
+.rest-artist img {
+    width: 150px;
+
+    height: 150px;
+
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+/* ////////////////////////////////////// */
+
+.track-image {
+    width: 20%;
+    height: auto;
+    /* border-radius: 15px; */
+    /* Pour des images rondes */
+}
+
+.track-number {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+
+.track-info {
+    padding: 10px;
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    max-height: 500px;
+}
+
+.track-name {
+    font-size: 35px;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 40px;
+    max-height: 2.4em;
+    /* pour 2 lignes de texte */
+    line-height: 1.2em;
+    max-width: 100%;
+    width: 380px;
+    /* ou une valeur fixe, selon votre design */
+    white-space: normal;
+    /* Permet au texte de passer à la ligne */
+    overflow-wrap: break-word;
+    /* Pour casser les mots longs et éviter le débordement */
+    word-break: break-word;
+    /* Assurez-vous que les mots ne débordent pas du conteneur */
+
+}
+
+/* Styles pour les artistes en liste */
+.track {
+    border: 1px solid #eee;
+    padding: 100px;
+    display: fle;
+    /* border-radius: 45px; */
+}
+
+.top-tracks-container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    padding-top: 50px;
+}
+
+.top-tracks-card {
+    flex: 1 1 calc(33.333% - 10px);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 45px;
+    margin: 10px;
+    text-align: center;
+    padding-top: 0px;
+    transition: 0.3s;
+    /* padding-bottom: 50px; */
+    padding: 50px 25px;
+    max-height: 680px;
+}
+
+.top-tracks-card img {
+    width: 400px;
+    /* Largeur fixe pour les images */
+    height: 400px;
+    /* Hauteur fixe pour les images */
+    /* border-radius: 15px; */
+    object-fit: cover;
+    /* Couvre la zone de l'image sans déformation, coupe les débordements */
+}
+
+
+
+.top-tracks-card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.rest-tracks-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-top: 150px;
+    /* ou space-between selon l'espacement désiré */
+    padding-left: 15%;
+}
+
+.rest-tracks {
+    flex: 0 0 calc(33.333% - 10px);
+    display: flex;
+    /* Ajuster la marge en conséquence */
+    margin: 5px;
+    /* La moitié de la soustraction ci-dessus pour une marge égale */
+    /* autres styles */
+}
+
+.rest-tracks-number {
+    font-size: 30px;
+    font-weight: bold;
+
+}
+
+.rest-tracks-info {
+    padding: 10px;
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+}
+
+.rest-tracks-name {
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 0px;
+}
+
+.rest-tracks img {
+    width: 150px;
+
+    height: 150px;
+
+    /* border-radius: 15px; */
+    object-fit: cover;
+
+}
+
+
+.homepage-description {
+    display: flex;
+    justify-content: center;
+    font-family: 'Satoshi-Variable', sans-serif;
+    font-size: 1rem;
+    flex-direction: column;
+    padding-top: 150px;
+    gap: 20px;
+}
+
+.description-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 30px;
+    font-size: 20px;
+}
+
+.description-text {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 20px;
+
+}
+
+.header-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.homepage-subheader {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    font-family: 'Satoshi-Variable', sans-serif;
+    font-size: 1.2rem;
+    padding: 150px;
+}
+
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 50px;
+    font-size: 1.1rem;
+    text-align: center;
+
+    padding-bottom: 200px;
+}
+
+.card {
+    max-width: 400px;
+    border: solid 3px rgb(0, 0, 0, 0.55);
+    border-radius: 45px;
+    min-height: 500px;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 40px;
+}
+
+.card-subtitle {
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 40px;
+}
+
+.card-content {
+    list-style: none;
+    padding: 40px;
+    font-size: 1.1rem;
+}
+
+.card-content li {
+    list-style: none;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    font-size: 1.3rem;
+    text-align: center;
+    padding-bottom: 300px;
+}
+
+.footer h3 {
+    font-size: 40px;
+}
+
+.footer-btn {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    margin-top: 80px;
+    cursor: pointer;
+    font-family: 'Satoshi-Variable', sans-serif;
+    font-weight: 0;
+    font-size: 20px;
+    color: #fff;
+    background-color: #0066CC;
+    padding: 20px 30px;
+    border: 5px solid #0066cc;
+    box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px;
+    border-radius: 38px;
+    transition: 1000ms;
+    transform: translateY(0);
+    text-decoration: none;
+    align-items: center;
+    cursor: pointer;
+}
+
+.footer-btn:hover {
+    transition: 1000ms;
+    padding: 20px 50px;
+    transform: translateY(-0px);
+    background-color: #1fdf64;
+    color: #0066cc;
+    border: solid 5px #1fdf64;
+
+}
+
+/* Media query pour les écrans moyens */
+@media (max-width: 768px) {
+    .top-artist-card {
+        flex: 1 1 calc(50% - 20px);
+        /* Deux cartes par ligne */
+        margin: 10px;
+    }
+
+    .app {
+        overflow-x: hidden;
+    }
+
+    .top-artist-card img {
+        max-width: 200px;
+        /* Ajustez la taille maximale pour les écrans moyens */
+        max-height: 200px;
+    }
+
+    .top-tracks-card {
+        flex: 1 1 calc(50% - 20px);
+        /* Deux cartes par ligne */
+        margin: 10px;
+    }
+
+    .top-tracks-card img {
+        max-width: 200px;
+        /* Ajustez la taille maximale pour les écrans moyens */
+        max-height: 200px;
+    }
+
+    .rest-artists-list {
+        justify-content: center;
+        padding-left: 0;
+        /* Enlever le padding pour centrer sur les petits écrans */
+    }
+
+    .rest-tracks {
+        flex-basis: 100%;
+        /* Prend toute la largeur pour une seule colonne */
+        margin: 10px 0;
+        /* Ajuster la marge verticale si nécessaire */
+    }
+
+    .rest-tracks-list {
+        justify-content: center;
+        padding-left: 0;
+        /* Enlever le padding pour centrer sur les petits écrans */
+    }
+
+    .resst-artist {
+        flex-basis: 100%;
+        /* Prend toute la largeur pour une seule colonne */
+        margin: 10px 0;
+        /* Ajuster la marge verticale si nécessaire */
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .app-btn {
+        font-size: 13px;
+        padding: 10px 10px;
+
+    }
+
+    .app-btn:hover {
+
+        transition: 1000ms;
+        padding: 10px 10px;
+        transform: translateY(-0px);
+        background-color: #1FDF64;
+        color: #0066cc;
+        border: solid 2px #1FDF64;
+    }
+
+    .homepage-header {
+        font-size: 2rem;
+    }
+
+    .homepage-subheader {
+        font-size: 1rem;
+        justify-content: left;
+        align-items: left;
+        padding: 70px 20px;
+    }
+
+    .card-container {
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        padding: 80px 0px;
+    }
+
+    .card {
+        max-width: 300px;
+    }
+
+    .footer {
+        padding: 30px;
+
+    }
+}
+
+/* Media query pour les petits écrans */
+@media (max-width: 480px) {
+    body {
+        overflow-x: hidden;
+    }
+
+
+
+    .top-artist-card {
+        flex: 1 1 90%;
+        /* Une carte par ligne sur les petits écrans */
+        margin: 50px 15px;
+        max-width: 90%;
+        ;
+    }
+
+    .top-artist-card img {
+        max-width: 100%;
+        /* Images s'étendent sur toute la largeur de la carte */
+        max-height: none;
+        /* Hauteur ajustée automatiquement */
+    }
+
+    .top-tracks-card {
+        flex: 1 1 90%;
+        /* Une carte par ligne sur les petits écrans */
+        margin: 50px 15px;
+        max-width: 90%;
+    }
+
+    .top-tracks-card img {
+        max-width: 100%;
+        /* Images s'étendent sur toute la largeur de la carte */
+        max-height: none;
+        /* Hauteur ajustée automatiquement */
+    }
+}

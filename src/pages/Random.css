@@ -1,0 +1,234 @@
+.random {
+    display: flex;
+    flex-direction: column;
+}
+
+.random-map {
+    padding-bottom: 650px;
+}
+
+.first-block {
+    padding: 80px 0px;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+
+}
+
+.main-random {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 100px 0px;
+    gap: 15px;
+    font-size: 20px;
+}
+
+.main-random img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+
+
+}
+
+.header-btn {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0px 200px;
+    gap: 15px;
+    font-size: 20px;
+    padding: 20px 0px;
+
+}
+
+.random-btn-right {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-decoration: none;
+
+}
+
+.btn-left {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-decoration: none;
+}
+
+.track-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 100px 400px;
+    max-height: 500px;
+
+}
+
+.random-details h2 {
+    font-size: 30px;
+    font-weight: 600;
+    padding: 20px 0px;
+    text-align: center;
+}
+
+
+.track-item {
+    flex: 1 1 30%;
+    /* Chaque élément prend environ un tiers de l'espace disponible */
+    min-width: 100px;
+    font-size: 10px;
+    width: 50px;
+    /* Définissez la largeur maximale */
+    word-wrap: break-word;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* Permet de casser les mots si nécessaire */
+    /* Largeur minimale pour chaque élément */
+    /* autres styles spécifiques pour les éléments de la liste */
+}
+
+.spotify-links {
+    display: flex;
+    margin-top: 15px;
+    justify-content: left;
+    align-items: left;
+    gap: 10px;
+
+
+}
+
+.track-item h3 {
+    width: 190px;
+    word-wrap: break-word;
+}
+
+
+.track-item img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.random-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 2px 10px;
+    border-radius: 5px;
+    background-color: red;
+    color: white;
+    font-size: 10px;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+    margin: 15px 100px;
+    cursor: pointer;
+}
+
+.random-btn:hover {
+    scale: 1.1;
+}
+
+.links-container {
+    display: flex;
+
+    align-items: center;
+}
+
+button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2px 10px;
+    border: 0px solid transparent;
+    background-color: rgba(100, 77, 237, 0.08);
+    border-radius: 1.25em;
+    transition: all 0.2s linear;
+    cursor: pointer;
+}
+
+button:hover {
+    box-shadow: 3.4px 2.5px 4.9px rgba(0, 0, 0, 0.025),
+        8.6px 6.3px 12.4px rgba(0, 0, 0, 0.035),
+        17.5px 12.8px 25.3px rgba(0, 0, 0, 0.045),
+        36.1px 26.3px 52.2px rgba(0, 0, 0, 0.055),
+        99px 72px 143px rgba(0, 0, 0, 0.08);
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    margin-right: 90px;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 4em;
+    background-color: rgba(0, 0, 0, 0.253);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: 25%;
+    left: 110%;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent rgba(0, 0, 0, 0.253) transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+.create-playlist {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 100px 0px;
+    gap: 15px;
+    font-size: 20px;
+
+}
+
+@media (max-width: 768px) {
+    .random-map {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding-bottom: 100px;
+    }
+
+    .track-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 100px;
+
+    }
+
+    .track-item {
+        justify-content: center;
+        align-items: center;
+    }
+}

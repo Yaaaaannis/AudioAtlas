@@ -1,0 +1,110 @@
+.header-btn {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0px 200px;
+    gap: 15px;
+    font-size: 20px;
+    padding: 20px 0px;
+
+
+
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+
+}
+
+.random-btn-right {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-decoration: none;
+
+}
+
+.btn-left {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-decoration: none;
+}
+
+
+@media (max-width: 768px) {
+    .header-btn {
+        display: flex;
+        justify-content: flex-end;
+        text-align: center;
+        padding-top: 10px;
+        padding-right: 10px;
+        overflow: hidden;
+        font-size: 3px;
+
+
+    }
+
+    .app-btn {
+        overflow-x: hidden;
+        padding: 10px 0px;
+
+    }
+
+    .btn-container {
+        display: flex;
+        justify-content: center;
+
+    }
+
+    .random-btn-right {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        text-decoration: none;
+
+    }
+
+    .btn-left {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        text-decoration: none;
+    }
+
+
+}
+
+@media (max-width: 480px) {
+
+
+    .app-btn {
+        overflow-x: hidden;
+        padding: 10px 5px;
+        min-height: 10px;
+
+    }
+
+    .btn-container {
+        display: flex;
+        justify-content: center;
+
+
+    }
+
+    .random-btn-right {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        text-decoration: none;
+
+    }
+
+    .btn-left {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        text-decoration: none;
+    }
+}
